@@ -1,0 +1,101 @@
+Q1. Explain Class and Object with respect to Object-Oriented Programming in python . Give a suitable example.
+Q2. Name the four pillars of OOPs in python 
+Q3. Explain why the init() function is used. Give a suitable example.
+Q4. Why self is used in OOPs?
+Q5. What is inheritance? Give an example for each type of inheritance.
+
+
+
+
+
+
+
+
+
+ans_____________________________________
+Q1. In object-oriented programming (OOP), a class is a blueprint for creating objects. It defines the attributes and behaviors that the objects of the class will have. An object, on the other hand, is an instance of a class. It is a concrete realization of the class, with its own unique data. In Python, you can create a class using the class keyword and create an object using the class name followed by parentheses.
+
+Example:
+# Defining a simple class
+class Dog:
+    def __init__(self, name):
+        self.name = name
+
+    def bark(self):
+        return "Woof!"
+
+# Creating an object of the Dog class
+my_dog = Dog("Buddy")
+print(my_dog.name)  # Output: Buddy
+print(my_dog.bark())  # Output: Woof!
+
+
+Q2. The four pillars of OOP in Python are:
+   - Encapsulation
+   - Inheritance
+   - Polymorphism
+   - Abstraction
+
+Q3. The __init__ function in Python is a special method used to initialize the object's attributes. It is called a constructor and is automatically invoked when a new instance of the class is created. It is used to perform any necessary initialization for the object.
+
+Example:
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+# Creating an object of the Person class
+person1 = Person("Alice", 30)
+print(person1.name)  # Output: Alice
+print(person1.age)  # Output: 30
+
+
+Q4. In Python, self is used to refer to the instance of the class. When defining methods within a class, the self parameter is used as the first parameter of any instance method. It refers to the particular instance of the class and allows you to access the attributes and methods of that instance within the class.
+
+Q5. Inheritance is a mechanism in OOP that allows a new class to inherit properties and behaviors from an existing class. There are different types of inheritance:
+   - Single inheritance
+   - Multiple inheritance
+   - Multilevel inheritance
+   - Hierarchical inheritance
+
+Example:
+# Single Inheritance
+class Animal:
+    def speak(self):
+        pass
+
+class Dog(Animal):
+    def speak(self):
+        return "Woof!"
+
+# Multiple Inheritance
+class A:
+    def display(self):
+        return "A"
+
+class B:
+    def display(self):
+        return "B"
+
+class C(A, B):
+    pass
+
+# Multilevel Inheritance
+class A:
+    pass
+
+class B(A):
+    pass
+
+class C(B):
+    pass
+
+# Hierarchical Inheritance
+class A:
+    pass
+
+class B(A):
+    pass
+
+class C(A):
+    pass
