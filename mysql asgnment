@@ -1,0 +1,79 @@
+Q1. **What is a database? Differentiate between SQL and NoSQL databases.**
+- **Database**: A database is an organized collection of data, typically stored and accessed electronically.
+- **SQL Databases** (Structured Query Language): These databases use a structured query language for defining and manipulating data. Examples include MySQL, PostgreSQL, Oracle.
+- **NoSQL Databases**: These databases use a data model other than the tabular format used in SQL databases. They are more flexible and can handle unstructured and semi-structured data efficiently. Examples include MongoDB, Cassandra, Redis.
+
+Q2. **What is DDL? Explain why CREATE, DROP, ALTER, and TRUNCATE are used with an example.**
+- **DDL (Data Definition Language)**: It is used to define the structure of the database, such as creating tables, modifying table structure, and dropping tables.
+  - **CREATE**: Used to create a new table in the database.
+  - **DROP**: Used to delete a table from the database.
+  - **ALTER**: Used to modify the structure of an existing table.
+  - **TRUNCATE**: Used to remove all the records from a table.
+ Example: 
+  
+  CREATE TABLE employees (
+      id INT,
+      name VARCHAR(50)
+  );
+  
+
+Q3. **What is DML? Explain INSERT, UPDATE, and DELETE with an example.**
+- **DML (Data Manipulation Language)**: It is used to manipulate data in the database.
+  - **INSERT**: Used to add new records into a table.
+  - **UPDATE**: Used to modify existing records in a table.
+  - **DELETE**: Used to remove records from a table.
+   Example:
+  
+  INSERT INTO employees (id, name) VALUES (1, 'Alice');
+  UPDATE employees SET name = 'Bob' WHERE id = 1;
+  DELETE FROM employees WHERE id = 1;
+  
+
+Q4. **What is DQL? Explain SELECT with an example.**
+- **DQL (Data Query Language)**: It is used to retrieve data from the database.
+  - **SELECT**: Used to fetch data from one or more tables.
+ Example:
+  
+  SELECT * FROM employees WHERE id = 1;
+  
+
+Q5. **Explain Primary Key and Foreign Key.**
+- **Primary Key**: A primary key is a unique identifier for each record in a table. It ensures that each record is uniquely identified.
+- **Foreign Key**: A foreign key is a field in a table that refers to the primary key in another table. It establishes a link between two tables.
+
+
+Q6. Write a python code to connect MySQL to python. Explain the cursor() and execute() method.
+
+import mysql.connector
+
+# Establishing a connection to MySQL
+mydb = mysql.connector.connect(
+    host="localhost",
+    user="yourusername",
+    password="yourpassword",
+    database="yourdatabase"
+)
+
+# Creating a cursor object using the cursor() method
+mycursor = mydb.cursor()
+
+# Using the execute() method to execute a SQL query
+mycursor.execute("SELECT * FROM your_table")
+
+# Fetching the results from the executed query
+result = mycursor.fetchall()
+for row in result:
+    print(row)
+
+
+
+The typical order of execution of SQL clauses in an SQL query is as follows:
+1. SELECT - to retrieve data from one or more tables.
+2. FROM - to specify the table(s) the data is retrieved from.
+3. WHERE - to specify conditions for selecting rows.
+4. GROUP BY - to group the result set by one or more columns.
+5. HAVING - to specify a search condition for a group.
+6. ORDER BY - to sort the result set by one or more columns.
+7. LIMIT - to limit the number of rows returned in the result set.
+
+
