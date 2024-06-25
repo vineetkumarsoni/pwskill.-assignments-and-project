@@ -1,0 +1,25 @@
+1. **What is Web Scraping and Its Applications:**
+   - **Web scraping** is a technique of extracting data from websites. It involves automating the process of obtaining structured information from the web. 🕸️
+   - It is used to extract data for various purposes such as market research, price monitoring, competitive analysis, gathering contact information, etc.
+   - Three common areas where web scraping is used:
+     1. **E-commerce:** Price monitoring, product details, reviews scraping.
+     2. **Market Research:** Collecting data for analysis.
+     3. **Social Media:** Scraping user data for sentiment analysis or research.
+
+2. **Different Methods for Web Scraping:**
+   - There are a variety of methods for web scraping, including using tools like BeautifulSoup, Scrapy, Selenium, and building custom scripts in programming languages like Python or Ruby. 🕵️‍♂️
+
+3. **Beautiful Soup:**
+   - **Beautiful Soup** is a Python library for pulling data out of HTML and XML files. It provides tools for parsing the HTML structure, searching the parsed tree, and extracting data. 🥣
+   - It is used to scrape information from web pages in a more structured and readable format.
+
+4. **Flask in Web Scraping Project:**
+   - **Flask** is a lightweight web framework for Python that is often used in web scraping projects for building web applications to display and interact with the scraped data. 🌐
+   - Flask can be used to create a web interface where users can input parameters, trigger the scraping process, and view the results.
+
+5. **AWS Services in the Project:**
+   - **AWS (Amazon Web Services)** offers various cloud services that can be used in a web scraping project:
+     1. **Amazon EC2 (Elastic Compute Cloud):** It can be used to host the web scraping application and execute the scraping tasks.
+     2. **Amazon S3 (Simple Storage Service):** Used to store the scraped data securely and reliably.
+     3. **Amazon RDS (Relational Database Service):** If you need to store structured data, RDS could be used to store the scraped data in a relational database.
+     4. **Amazon IAM (Identity and Access Management):** Used for managing access to AWS services securely.
