@@ -1,0 +1,96 @@
+Q1. Create a Pandas Series that contains the following data: 4, 8, 15, 16, 23, and 42. Then, print the series.
+Q2. Create a variable of list type containing 10 elements in it, and apply pandas.Series function on the
+variable print it.
+Q3. Create a Pandas DataFrame that contains the following data:
+
+Name
+Alice
+Bob
+Claire
+
+Age
+25
+30
+27
+
+Gender
+Female
+Male
+Female
+
+Then, print the DataFrame.
+Q4. What is ‘DataFrame’ in pandas and how is it different from pandas.series? Explain with an example.
+Q5. What are some common functions you can use to manipulate data in a Pandas DataFrame? Can
+you give an example of when you might use one of these functions?
+Q6. Which of the following is mutable in nature Series, DataFrame, Panel?
+Q7. Create a DataFrame using multiple Series. Explain with an example.
+
+
+
+
+answer___________________________________________________
+
+Q1. 
+import pandas as pd
+
+data = [4, 8, 15, 16, 23, 42]
+series1 = pd.Series(data)
+print(series1)
+
+
+Q2. 
+import pandas as pd
+
+data = list(range(10))
+series2 = pd.Series(data)
+print(series2)
+
+
+Q3. 
+import pandas as pd
+
+data = {
+    'Name': ['Alice', 'Bob', 'Claire'],
+    'Age': [25, 30, 27],
+    'Gender': ['Female', 'Male', 'Female']
+}
+
+df = pd.DataFrame(data)
+print(df)
+
+
+Q4. 
+- **DataFrame in Pandas**: It is a 2-dimensional labeled data structure with columns of potentially different types. It is similar to a table in a database or a spreadsheet.  
+- **Difference from Pandas Series**:  
+    - DataFrame is a 2-dimensional data structure whereas Series is a 1-dimensional data structure.  
+    - DataFrame can store multiple columns of data whereas Series can store only a single column of data.
+
+Q5. Common functions to manipulate data in a Pandas DataFrame:
+    - .head(): Returns the first n rows.
+    - .tail(): Returns the last n rows.
+    - .info(): Displays basic information about the data.
+    - .describe(): Generates descriptive statistics.
+    - .drop(): Drops specified labels from rows or columns.
+    - .groupby(): Group DataFrame using a mapper or by a Series of columns.
+    
+An example of usage could be:
+# to get descriptive statistics on a specific column 'Age'
+print(df['Age'].describe())
+
+
+Q6. DataFrame is mutable in nature while Series is also mutable. Panel is considered to be less mutable. 
+
+Q7. Creating a DataFrame using multiple Series:
+import pandas as pd
+
+# Creating multiple Series
+names = pd.Series(['Alice', 'Bob', 'Claire'])
+ages = pd.Series([25, 30, 27])
+genders = pd.Series(['Female', 'Male', 'Female'])
+
+# Creating a DataFrame using multiple Series
+data = {'Name': names, 'Age': ages, 'Gender': genders}
+df = pd.DataFrame(data)
+
+print(df)
+
